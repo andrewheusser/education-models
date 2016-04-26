@@ -1,28 +1,17 @@
-# OpenBCI Dashboard
+# Statistical Models for Education
 
-![alt text](/assets/preview.gif "OpenBCI Visualizer Preview")
-
-A fullstack javascript app for capturing and visualizing OpenBCI EEG data
+A fullstack javascript app for with demos of statistical models for education
 
 This project is under development, this is just a first draft.
 
 ## Setup 
 
-* Plug in OpenBCI dongle
-* Turn on OpenBCI board
-
 ```bash
 npm install
-node visualizer
+node server.js
 ```
 
-* Go to: http://localhost:3060
-
-## Simulating data
-
-```bash
-node visualizer simulate
-```
+* Go to: http://localhost:3333
 
 ## Support
 
