@@ -1,0 +1,41 @@
+<section>
+    <h2>3-Parameter IRT Model</h2>
+    <canvas
+      id="line"
+      class="chart chart-line"
+      chart-data="$ctrl.data"
+      chart-labels="$ctrl.labels"
+      chart-series="$ctrl.series"
+      chart-options="$ctrl.options">
+    </canvas>
+    <md-content style="margin: 16px; padding:16px">
+    <h3>
+      Parameters
+    </h3>
+    <div class="row">
+    <md-slider-container>
+      <span>Discrimination</span>
+      <md-slider flex  step=".01" min="0" max="3" ng-model="parameters.a" aria-label="blue" id="blue-slider">
+      </md-slider>
+      <md-input-container>
+        <input flex type="number" ng-model="parameters.a" aria-label="blue" aria-controls="blue-slider">
+      </md-input-container>
+    </md-slider-container>
+    <md-slider-container>
+      <span>Difficulty</span>
+      <md-slider flex  step=".01" min="-3" max="3" ng-model="parameters.b" aria-label="blue" id="blue-slider">
+      </md-slider>
+      <md-input-container>
+        <input flex type="number" ng-model="parameters.b" aria-label="blue" aria-controls="blue-slider">
+      </md-input-container>
+    </md-slider-container>
+    <md-slider-container>
+      <span>Chance Level</span>
+      <md-slider flex  step=".01" min="0" max="1" ng-model="parameters.c" aria-label="blue" id="blue-slider">
+      </md-slider>
+      <md-input-container>
+        <input flex type="number" ng-model="parameters.c" aria-label="blue" aria-controls="blue-slider">
+      </md-input-container>
+    </md-slider-container>
+  </div>
+</section>

@@ -1,0 +1,21 @@
+{
+  "name": "irt",
+  "version": "1.0.0",
+  "description": "Item Response App",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "IRT"
+  ],
+  "author": "Andy Heusser",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.5.3",
+    "angular-chartjs": "0.0.5",
+    "chart.js": "^1.1.1",
+    "express": "^4.13.4"
+  }
+}
