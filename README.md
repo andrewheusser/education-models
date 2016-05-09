@@ -2,7 +2,7 @@
 
 A fullstack javascript app for with demos of statistical models for education
 
-This project is under development, this is just a first draft.
+Here is a demo: http://radiant-crag-89258.herokuapp.com/
 
 ## Setup 
 
