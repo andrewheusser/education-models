@@ -21,6 +21,7 @@ angular.module('irtApp')
               return theta % 1 === 0 ? theta : ''
             });
             $ctrl.data = [createLogisticModel(parameters.a,parameters.b,parameters.c,$ctrl.thetas)];
+            console.log($ctrl.data)
             $ctrl.options = {
               scaleOverride : true,
               scaleSteps : 10,

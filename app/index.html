@@ -18,6 +18,7 @@
         <script src="app.js"></script>
 
         <script src="components/logistic/logistic.js"></script>
+        <script src="components/BKT/BKT.js"></script>
 
 
     </head>
@@ -27,9 +28,26 @@
 
             <h1>Statistical Models for Education</h1>
 
-            <section class="row">
+            <nav ng-init="mode = 'bkt'">
+                <button ng-click="mode = 'bkt'">Bayesian Knowledge Tracing</button>
+                <button ng-click="mode = 'irt-logistic'">Item Response Theory</button>
+            </nav>
+
+            <section class="row" ng-if="mode == 'bkt'">
+                <bkt class="block block-50"></bkt>
+            </section>
+
+            <section class="row" ng-if="mode == 'irt-logistic'">
                 <irt-logistic class="block block-50"></irt-logistic>
             </section>
+
+
+            <!-- <section class="row">
+                <irt-logistic class="block block-50"></irt-logistic>
+            </section> -->
+            <!-- <section class="row">
+                <bkt class="block block-50"></bkt>
+            </section> -->
 
         </main>
 

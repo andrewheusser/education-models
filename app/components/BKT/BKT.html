@@ -1,0 +1,60 @@
+<section>
+    <h2>Bayesian Knowledge Tracing</h2>
+    <canvas
+      id="line"
+      class="chart chart-line"
+      chart-data="$ctrl.data"
+      chart-labels="$ctrl.labels">
+    </canvas>
+    <md-content style="margin: 16px; padding:16px">
+      <h3>
+        Question Accuracy (Click to Toggle):
+      </h3>
+      <div class="row">
+        <div style="padding:2px 2px 2px 2px" ng-repeat="response in responses track by $index">
+          <md-button ng-click="toggleResponse($index)" ng-class="(response) ? 'md-primary' : 'md-warning'" style="margin:2px" class="md-fab md-mini">
+            {{response}}
+          </md-button>
+        </div>
+      </div>
+    </md-content>
+    <md-content style="margin: 16px; padding:16px">
+    <h3>
+      Parameters
+    </h3>
+    <div class="row">
+    <md-slider-container>
+      <span>Initial p(Learned)</span>
+      <md-slider flex  step=".01" min="0" max="1" ng-model="parameters.pL0" aria-label="blue" id="blue-slider">
+      </md-slider>
+      <md-input-container>
+        <input flex type="number" ng-model="parameters.pL0" aria-label="blue" aria-controls="blue-slider">
+      </md-input-container>
+    </md-slider-container>
+    <md-slider-container>
+      <span>p(Transition)</span>
+      <md-slider flex  step=".01" min="0" max="1" ng-model="parameters.pT" aria-label="blue" id="blue-slider">
+      </md-slider>
+      <md-input-container>
+        <input flex type="number" ng-model="parameters.pT" aria-label="blue" aria-controls="blue-slider">
+      </md-input-container>
+    </md-slider-container>
+    <md-slider-container>
+      <span>p(Guess)</span>
+      <md-slider flex  step=".01" min="0" max="1" ng-model="parameters.pG" aria-label="blue" id="blue-slider">
+      </md-slider>
+      <md-input-container>
+        <input flex type="number" ng-model="parameters.pG" aria-label="blue" aria-controls="blue-slider">
+      </md-input-container>
+    </md-slider-container>
+    <md-slider-container>
+      <span>p(Slip)</span>
+      <md-slider flex  step=".01" min="0" max="1" ng-model="parameters.pS" aria-label="blue" id="blue-slider">
+      </md-slider>
+      <md-input-container>
+        <input flex type="number" ng-model="parameters.pS" aria-label="blue" aria-controls="blue-slider">
+      </md-input-container>
+    </md-slider-container>
+  </div>
+</md-content>
+</section>
