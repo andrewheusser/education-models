@@ -1,7 +1,7 @@
 {
-  "name": "irt",
+  "name": "models.edu",
   "version": "1.0.0",
-  "description": "Item Response App",
+  "description": "Statistical Models for Education",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
