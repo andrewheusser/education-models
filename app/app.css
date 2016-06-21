@@ -134,28 +134,11 @@ button:hover {
 }
 
 nav button:nth-child(1) {
-  background-color: rgba(112,185,252,1);
+  background-color: rgb(233,30,99);
 }
 
 nav button:nth-child(2) {
-  background-color: rgba(138,219,229,1);
-}
-
-nav button:nth-child(3) {
-  background-color: rgba(162,86,178,1);
-}
-
-nav button:nth-child(4) {
-  background-color: rgba(144,132,246,1);
-}
-
-nav button:nth-child(5) {
-  background-color: rgba(232,223,133,1);
-  color: #000000;
-}
-
-nav button:nth-child(6) {
-  background-color: rgba(148,159,177,1);
+  background-color: rgb(63,81,181);
 }
 
 .row {
