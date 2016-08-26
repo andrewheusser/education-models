@@ -12,7 +12,10 @@
       </h3>
       <div class="row">
         <div style="padding:2px 2px 2px 2px" ng-repeat="response in responses track by $index">
-          <md-button ng-click="toggleResponse($index)" ng-class="(response) ? 'md-primary' : 'md-warning'" style="margin:2px" class="md-fab md-mini">
+          <!-- <md-button ng-click="toggleResponse($index)" ng-class="(response) ? 'md-primary' : 'md-warning'" style="margin:2px" class="md-fab md-mini">
+            {{response}}
+          </md-button> -->
+          <md-button ng-click="toggleResponse($index)" ng-class="{'md-primary' : response===1, 'md-accent' : response===0, 'md-gray' : response===null}" style="margin:2px" class="md-fab md-mini">
             {{response}}
           </md-button>
         </div>

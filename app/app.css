@@ -188,3 +188,7 @@ nav button:nth-child(2) {
   width: 100%;
   min-height: 580px;
 }
+
+.md-gray {
+  background-color: grey !important;
+}

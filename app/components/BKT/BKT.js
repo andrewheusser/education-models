@@ -17,7 +17,7 @@ angular.module('irtApp')
 
     $scope.parameters = parameters;
 
-    var responses = [0,1,0,1,0,1,1,1,1,1];
+    var responses = [0,1,0,1,0,1,null,1,1,1];
     $scope.responses = responses;
 
     $ctrl.data = [runBKT(responses,$scope.parameters)];
@@ -40,7 +40,13 @@ angular.module('irtApp')
 
     $scope.toggleResponse = function(index){
       console.log($scope.responses[index])
-      $scope.responses[index] = +!$scope.responses[index];
+      if($scope.responses[index]===1){
+        $scope.responses[index] = null;
+      } else if ($scope.responses[index]===null) {
+        $scope.responses[index] = 0;
+      } else if ($scope.responses[index]===0) {
+        $scope.responses[index] = 1;
+      }
       $ctrl.data = [runBKT(responses,parameters)];
     };
 
@@ -55,15 +61,19 @@ angular.module('irtApp')
         if(itrial===0){
           if(responses[itrial]===0){
             pK.push((pL0*pS) / ((pL0*pS) + (1-pL0)*(1-pG)));
-          } else {
+          } else if (responses[itrial]===1) {
             pK.push((pL0*(1-pS)) / ((pL0*(1-pS)) + ((1-pL0)*pG)));
+          } else {
+            pK.push(pL0)
           };
         } else {
           pL_updated = pK[itrial-1] + (1-pK[itrial-1])*pT;
           if(responses[itrial]===0){
             pK.push((pL_updated*(pS)) / ((pL_updated*(pS)) + ((1-pL_updated)*(1-pG))));
-          } else {
+          } else if (responses[itrial]===1){
             pK.push((pL_updated*(1-pS)) / ((pL_updated*(1-pS)) + ((1-pL_updated)*pG)));
+          } else {
+            pK.push(pL_updated)
           }
         }
       }
